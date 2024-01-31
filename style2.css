@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    display: flex;             /*esnek kutu davranışı*/
+    justify-content: center;   /*esnek öge*/
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+nav{
+    list-style-type: none;
+    margin: 0px; padding: 0px;
+    overflow: hidden;          /*taşan kısım varsa ziyaretçiye gösterilmez*/
+    background-color: #393e46;
+}
+nav a{
+    position: static;         /*konumlandırma varsayıln*/
+    bottom: 20px;
+    float: left;
+    font-size: 22px;
+    font-weight: bolder; 
+    color: #fff4e0;
+    text-decoration: none;    /*alt çizgi kaldırıldı*/
+    display: block;           /*başka blok ögelerinin bulunması engellendi*/
+    padding: 40px 25px;
+    text-align: center;
+    transition: .5s;          /*geçiş*/
+}
+
+nav a:hover{
+    background-color: #00adb5; /*ardalan rengi*/
+    text-decoration: underline; /*fare üzerine geldiğinde link altında çizgi olacak*/
+}
+
+nav a span{
+    position: relative; /*bulunduğu yere göre konumlandırma*/
+    top: 18px;
+    margin-left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: .5s;
+}
+
+nav a:hover span{
+    transform: scale(1) translate Y(0);
+    opacity: 1;
+}
